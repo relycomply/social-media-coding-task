@@ -19,16 +19,14 @@ def get_social_media_activity():
 
 if __name__ == "__main__":
     app = Flask(__name__)
-
+    #Return All Posts From All End Points
     @app.route("/")
     def social_network_activity():
-        # TODO: your code here
         json_response = get_social_media_activity()
         return json_response
-
+    
     @app.route("/numeric")
     def numeric_social_network_activity():
-        # TODO: your code here
         # get the data
         json_response = get_social_media_activity()
         # return the number of posts for each network
