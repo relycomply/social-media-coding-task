@@ -26,4 +26,12 @@ if __name__ == "__main__":
         json_response = get_social_media_activity()
         return json_response
 
+    @app.route("/numeric")
+    def numeric_social_network_activity():
+        # TODO: your code here
+        # get the data
+        json_response = get_social_media_activity()
+        # return the number of posts for each network
+        return {"instagram": len(json_response["instagram"]), "facebook": len(json_response["facebook"]), "twitter": len(json_response["twitter"])}
+
     app.run()
