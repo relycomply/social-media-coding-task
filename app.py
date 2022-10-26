@@ -25,7 +25,7 @@ if __name__ == "__main__":
         json_response = get_social_media_activity()
         return json_response
     
-    @app.route("/numeric")
+    @app.route("/api")
     def numeric_social_network_activity():
         # get the data
         json_response = get_social_media_activity()
