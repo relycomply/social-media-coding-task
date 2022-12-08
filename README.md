@@ -1,28 +1,13 @@
-# **RelyComply Social Media Coding Task**
+# **Social Media API**
 
-#### Problem
+A Flask server has been set up in `app.py`. Complete the provided endpoint so that it will return a JSON response with an indicator of the activity level for each social network. 
+Number of Posts For Each Platform Indicator ("/api")
+![API](https://user-images.githubusercontent.com/13138647/198163743-626fec27-e94b-45d5-9298-1d1be0c2f00e.PNG)
 
-Our client, Morgain Stainley, needs an API with live data on the activity levels of different social networks to serve as an input to their AI trading bots. Specifically, they need an endpoint they can query to get a numeric indicator of the amount of content posted on each social network. This should be a quick little task, but the client is paying us a billion dollars so your implementation needs to be robust and fast.
 
-#### Solution
 
-Fortunately, we’ve found some very simple endpoints that returns social media content from the last hour (don't tell the client!):
+![home](https://user-images.githubusercontent.com/13138647/198163632-1caa58ae-00d1-4b9f-9f28-d843ca1bd572.PNG)
 
-- [https://takehome.io/twitter](https://takehome.io/twitter)
-- [https://takehome.io/facebook](https://takehome.io/facebook)
-- https://takehome.io/instagram
-
-(Let's pretend it's 10 years ago and Facebook hasn't yet bought Instagram.)
-
-A Flask server has been set up in `app.py`. Complete the provided endpoint so that it will return a JSON response with an indicator of the activity level for each social network. Something along the lines of `{"instagram": ..., "facebook": ..., "twitter": ...}`.
-
-Because speed is everything in the trading world, the calls to the 3 social media endpoints need to be made in parallel, i.e. using multi-threading. Morgain Stainley wants their bots to be the fastest.
-
-If you are in doubt of a detail of the spec just use your best judgement and let me know what you decided with the submission.
-
-#### Caveat
-
-Because some of these social networks adopted the slogan *"Move fast and break things"*, they don't always respond predictably. They break. And respond with invalid JSON. Life's hard.
 
 #### Quickstart
 
@@ -33,4 +18,3 @@ pip install -r requirements.txt
 flask --debug run
 ```
 
-The submission should just be a link to your forked repo.
