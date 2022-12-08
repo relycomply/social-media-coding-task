@@ -19,7 +19,7 @@ def test_social_network_activity(social_client1, social_client2, social_client3,
         assert activities[activity] == 1
 
 
-invalid_value = "This is a gift."
+invalid_json_value = "This is a gift." # single post
 
 @mock.patch('resources.socials.fb_client._get', return_value=values)
 @mock.patch('resources.socials.insta_client._get', return_value=values)
