@@ -5,7 +5,7 @@ class TwitterClient(SocialMediaClient):
 
     def __init__(self):
         self.base_url = "https://takehome.io/twitter"
-        self.headers = {"Content-Type": "application/json;"}
+        self.headers = {}
 
     def _get(self, endpoint='', params={}):
         try:
@@ -15,7 +15,7 @@ class TwitterClient(SocialMediaClient):
                     headers=self.headers)
             return res.json()
         except requests.exceptions.JSONDecodeError:
-            return []
+            return [{ 'post': res.text }] if res.text else []
         
     def get_feed(self):
         return self._get()

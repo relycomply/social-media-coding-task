@@ -18,3 +18,17 @@ def test_social_network_activity(social_client1, social_client2, social_client3,
     for activity in activities:
         assert activities[activity] == 1
 
+
+invalid_value = "This is a gift."
+
+@mock.patch('resources.socials.fb_client._get', return_value=values)
+@mock.patch('resources.socials.insta_client._get', return_value=values)
+@mock.patch('resources.socials.ttw_client._get', return_value=values)
+def test_social_network_activity_invalid_json(social_client1, social_client2, social_client3, client):
+    social_activity = client.get('/')
+    assert social_activity.status_code == 200
+    activities = social_activity.json
+
+    for activity in activities:
+        assert activities[activity] == 1
+

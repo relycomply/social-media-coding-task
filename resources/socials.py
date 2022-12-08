@@ -12,7 +12,7 @@ class GetSocialNetworkActivity:
     post_count = {}
 
     @classmethod
-    def add_posts(cls, social_client: SocialMediaClient, name:str):
+    def add_posts(cls, social_client: SocialMediaClient, name: str):
         cls.post_count[name] = len(social_client.get_feed())
 
     def __call__(self, *args: Any, **kwds: Any) -> Any:
